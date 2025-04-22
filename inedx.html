@@ -1,0 +1,75 @@
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اپلیکیشن یادداشت‌برداری</title>
+    <link rel="stylesheet" href="public/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>یادداشت‌های من</h1>
+      <form id="note-form">
+        <input
+          type="text"
+          id="note-title"
+          placeholder="عنوان یادداشت"
+          required
+        />
+        <textarea id="note-content" placeholder="محتوای یادداشت"></textarea>
+        <select id="note-category">
+          <option value="" disabled selected>دسته‌بندی را انتخاب کنید</option>
+          <option value="work">کار</option>
+          <option value="personal">شخصی</option>
+          <option value="other">سایر</option>
+        </select>
+        <button type="submit" class="submit-form">اضافه کردن یادداشت</button>
+      </form>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="جستجو در یادداشت‌ها..."
+        />
+      </div>
+      <div class="filter-buttons">
+        <button class="btn-categorys active" id="filter-all">همه</button>
+        <button class="btn-categorys" id="filter-کار">کار</button>
+        <button class="btn-categorys" id="filter-شخصی">شخصی</button>
+        <button class="btn-categorys" id="filter-سایر">سایر</button>
+      </div>
+
+      <div id="note-list">
+        <!-- نمونه یادداشت استاتیک برای نمایش ساختار -->
+        <!-- <div class="note-item" data-id="1">
+          <h3>جلسه با تیم</h3>
+          <p>برنامه‌ریزی برای پروژه جدید، ساعت ۱۴:۰۰</p>
+          <span class="category">کار</span>
+          <div class="actions">
+            <button class="edit-btn">ویرایش</button>
+            <button class="delete-btn">حذف</button>
+          </div>
+        </div>
+        <div class="note-item" data-id="1">
+          <h3>جلسه با تیم</h3>
+          <p>برنامه‌ریزی برای پروژه جدید، ساعت ۱۴:۰۰</p>
+          <span class="category">کار</span>
+          <div class="actions">
+            <button class="edit-btn">ویرایش</button>
+            <button class="delete-btn">حذف</button>
+          </div>
+        </div>
+        <div class="note-item" data-id="1">
+          <h3>جلسه با تیم</h3>
+          <p>برنامه‌ریزی برای پروژه جدید، ساعت ۱۴:۰۰</p>
+          <span class="category">کار</span>
+          <div class="actions">
+            <button class="edit-btn">ویرایش</button>
+            <button class="delete-btn">حذف</button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="dist/app.js"></script>
+  </body>
+</html>
+

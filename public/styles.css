@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "kaqaz-title";
+  src: url(fonts/KaghazAlef-Bold.otf);
+}
+@font-face {
+  font-family: "kaqaz";
+  src: url(fonts/Kaghaz.ttf);
+}
+@font-face {
+  font-family: "iran-yekan";
+  src: url(fonts/iranyekanwebbold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "kaqaz";
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  direction: rtl;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#note-title,
+#note-content,
+#note-category,
+#search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#note-title {
+  width: 100%;
+}
+
+#note-content {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+}
+
+#note-category {
+  width: 100%;
+}
+
+#note-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#note-form button:hover {
+  background-color: #0056b3;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 100%;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-item {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.note-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-item h3 {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+.note-item p {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.note-item .category {
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  background-color: #007bff;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.note-item .actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.note-item .actions button {
+  font-family: sans-serif;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.note-item .actions .edit-btn {
+  font-family: "iran-yekan";
+
+  background-color: #28a745;
+  color: #fff;
+}
+
+.note-item .actions .edit-btn:hover {
+  background-color: #218838;
+}
+
+.note-item .actions .delete-btn {
+  font-family: "iran-yekan";
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.note-item .actions .delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* پاسخ‌گویی به صفحه‌نمایش‌های کوچک */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  #note-form button {
+    font-size: 14px;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+
+  .note-item h3 {
+    font-size: 16px;
+  }
+
+  .note-item p {
+    font-size: 13px;
+  }
+}
+
+h6 {
+  margin: 0.8rem 0;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #de9c23;
+  color: #040428;
+  border: 0;
+  border-radius: 8px;
+}
+
+input,
+textarea,
+select {
+  font-family: "iran-yekan";
+}
